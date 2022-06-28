@@ -1,7 +1,9 @@
 body {
   margin: 0;
   background-color: $background;
-  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
 }
 
 main {
@@ -115,10 +117,9 @@ main {
 // FOOTER
 
 footer {
-  margin-top: 50px;
-  position: relative;
-  bottom: 0;
+  height: 100px;
   @extend %flex-center;
+  align-items: center;
 }
 .iconify {
   color: white;
@@ -126,11 +127,11 @@ footer {
 }
 
 .reseaux {
-  position: absolute;
+  margin: 0;
   display: flex;
   justify-content: space-around;
   width: 30%;
-  bottom: 20px;
+
   min-width: 290px;
 }
 
