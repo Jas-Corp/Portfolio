@@ -1,0 +1,41 @@
+// ROBOTO
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+// SPIN CICLE
+@font-face {
+  font-family: "Spin";
+  src: url("../resources/fonts/SPINC___.TTF");
+}
+
+// MISE EN FORME DU TEXTE
+h1 {
+  font-family: Spin, sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 100px;
+  margin: 0;
+}
+h2 {
+  font-size: 50px;
+  margin: 0;
+}
+
+p,
+h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+// LETTRE DE L'ANIMATION DE CHARGEMENT
+.letter {
+  font-family: Spin, sans-serif;
+  letter-spacing: 0.05em;
+
+  color: white;
+  font-size: 50px;
+
+  &:first-child {
+    opacity: 0;
+  }
+}

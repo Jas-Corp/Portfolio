@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  background-color: $background;
+  height: 100vh;
+}
+
+main {
+  @extend %flex-center;
+  flex-direction: column;
+
+  height: 100%;
+  width: 100%;
+}
+
+// PRESENTATION
+.presentation {
+  &__subtitle {
+    display: flex;
+    align-items: baseline;
+    &::after {
+      content: "";
+      width: 3px;
+      height: 50px;
+      display: block;
+      background-color: white;
+      animation: twink 0.6s infinite;
+      align-self: center;
+    }
+  }
+}
+
+.works {
+  // TITRE DE LA CATEGORIES
+  &__title {
+    text-align: center;
+    font-size: 30px;
+    &::after {
+      content: "";
+      width: 50%;
+      height: 3px;
+      background-color: white;
+      display: block;
+      margin: 35px auto;
+    }
+  }
+  // Paragraphe
+  &__text {
+    text-align: center;
+    font-size: 15px;
+
+    & a {
+      color: $pink;
+    }
+  }
+  // LIST DES SITES
+  &__list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+
+    @for $i from 1 to 7 {
+      &__element:nth-child(#{$i}) {
+        animation: appeard 0.5s forwards calc(0.3s *#{$i});
+      }
+    }
+
+    // ELEMENT DE LA LISTE
+    &__element {
+      @extend %flex-center;
+      flex-direction: column;
+
+      color: white;
+
+      white-space: nowrap;
+      text-decoration: none;
+
+      margin: 15px;
+      opacity: 0;
+
+      &--no-validate h3 {
+        color: rgba(118, 118, 118, 0.721);
+      }
+      &--validate {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &--validate::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: linear-gradient(180deg, #c1119d 0%, #071a49 100%);
+        border-radius: 50%;
+        border: 2px solid white;
+        display: block;
+        z-index: 3;
+      }
+
+      &--no-validate::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: linear-gradient(180deg, #5e5a5d 0%, #000000 100%);
+        border-radius: 50%;
+        border: 2px solid white;
+        display: block;
+        z-index: 3;
+      }
+    }
+  }
+}
+
+// FOOTER
+
+footer {
+  @extend %flex-center;
+}
+.iconify {
+  color: white;
+  font-size: 30px;
+}
+
+.reseaux {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  bottom: 20px;
+  min-width: 290px;
+}
+
+// MEDIAQUERY
+@media screen and (max-width: 750px) {
+  h1 {
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 25px;
+    margin: 0;
+  }
+  .letter {
+    font-size: 25px;
+  }
+
+  .works__list {
+    flex-direction: column;
+  }
+}
