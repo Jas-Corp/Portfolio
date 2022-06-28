@@ -1,7 +1,7 @@
 body {
   margin: 0;
   background-color: $background;
-
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -9,7 +9,6 @@ body {
 main {
   @extend %flex-center;
   flex-direction: column;
-
   height: 100%;
   width: 100%;
 }
@@ -137,6 +136,9 @@ footer {
 
 // MEDIAQUERY
 @media screen and (max-width: 750px) {
+  body {
+    height: auto;
+  }
   h1 {
     font-size: 50px;
   }
