@@ -115,6 +115,9 @@ main {
 // FOOTER
 
 footer {
+  margin-top: 50px;
+  position: relative;
+  bottom: 0;
   @extend %flex-center;
 }
 .iconify {

@@ -184,6 +184,12 @@ main {
   z-index: 3;
 }
 
+footer {
+  margin-top: 50px;
+  position: relative;
+  bottom: 0;
+}
+
 .iconify {
   color: white;
   font-size: 30px;
